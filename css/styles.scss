@@ -1,0 +1,264 @@
+/*! minireset.css v0.0.7 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+// fonts
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:regular&display=swap);
+// basic
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Space Mono';
+}
+
+// header
+.header {
+    margin-top: 110px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    @media (max-width: 576px) {
+        margin-top: 71px;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    // .header__title
+
+    &__title {
+        flex: 1 0 auto;
+        font-family: 'PT Serif';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.045em;
+    }
+
+    // .header__content
+
+    &__content {
+        max-width: 440px;
+    }
+}
+
+.content {
+
+    // .content__title
+
+    &__title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: uppercase;
+    }
+
+    // .content__desc
+
+    &__desc {
+        margin-top: 10px;
+        font-family: 'Poppins';
+        font-size: 18px;
+        line-height: 27px;
+        @media ( max-width: 589px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// main
+.main {
+    margin-top: 96px;
+    margin-bottom: 100px;
+    @media (max-width: 589px) {
+        margin-top: 66px;
+    }
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    @media (min-width: 873px) {
+        :nth-of-type(3n+2) {
+                margin-top: 100px;
+            }
+    }
+    @media (max-width: 872px) {
+        justify-content: space-evenly;
+        :nth-of-type(even) {
+                margin-top: 56px;
+            }
+    }
+
+    // .team__card
+
+    &__card {
+        margin-right: 26px;
+        position: relative;
+        @media (max-width: 589px) {
+            margin-right: 12px;
+        }
+    }
+}
+
+.card {
+
+    // .card__img
+
+    &__img {
+        @media (max-width: 589px) {
+            max-width: 140px;
+        }
+    }
+
+    // .card__title
+
+    &__title {
+        margin-top: 15px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    // .card__desc
+
+    &__desc {
+        position: absolute;
+        left: 264px;
+        top: -100px;
+        width: 238px;
+        display: inline-block;
+        font-family: 'PT Serif';
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        @media (max-width: 872px) {
+            top: -56px;
+        }
+        @media (max-width: 589px) {
+            left: 154px;
+            font-size: 10px;
+            line-height: 13px;
+        }
+    }
+}
+
+// footer
+
+.footer {
+    padding-top: 50px;
+    padding-bottom: 25px;
+
+    // .footer__container
+
+    &__container {}
+
+    // .footer__copyright
+
+    &__copyright {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #BDBDBD;
+    }
+}
+
+.copyright {
+
+    // .copyright__owner
+
+    &__owner {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
